@@ -1,0 +1,67 @@
+{
+	"name": "ai-programmer",
+	"description": "AI Programmer that browses GitHub, combining RAG strategy and a large language model to fetch, refine, and present code solutions.",
+	"author": "JacobLinCool <jacoblincool@gmail.com> (https://jacoblin.cool)",
+	"version": "0.0.0",
+	"license": "MIT",
+	"type": "module",
+	"bin": {
+		"ai-programmer": "./dist/index.js"
+	},
+	"exports": {
+		"import": "./dist/lib.js",
+		"types": "./dist/lib.d.ts",
+		"default": "./dist/lib.js"
+	},
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"prepare": "husky",
+		"format": "prettier --write --ignore-path .gitignore .",
+		"test": "vitest",
+		"changeset": "changeset",
+		"build": "tsup",
+		"build:docs": "typedoc --out docs src/lib.ts",
+		"start": "node dist/index.js",
+		"dev": "tsx src/index.ts"
+	},
+	"dependencies": {
+		"debug": "^4.3.4",
+		"dotenv": "^16.4.1",
+		"octokit": "^3.1.2",
+		"openai": "^4.26.0",
+		"yargs": "^17.7.2"
+	},
+	"devDependencies": {
+		"@changesets/changelog-github": "^0.5.0",
+		"@changesets/cli": "^2.27.1",
+		"@types/debug": "^4.1.12",
+		"@types/node": "^20.11.13",
+		"@types/yargs": "^17.0.32",
+		"husky": "^9.0.7",
+		"lint-staged": "^15.2.1",
+		"prettier": "^3.2.4",
+		"prettier-plugin-organize-imports": "^3.2.4",
+		"serve": "^14.2.1",
+		"tsup": "^8.0.1",
+		"tsx": "^4.7.0",
+		"typedoc": "^0.25.7",
+		"typescript": "^5.3.3",
+		"vitest": "^1.2.2"
+	},
+	"lint-staged": {
+		"*.{ts,js,json,yaml,yml}": [
+			"prettier --write"
+		]
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/JacobLinCool/ai-programmer.git"
+	},
+	"bugs": {
+		"url": "https://github.com/JacobLinCool/ai-programmer/issues"
+	},
+	"homepage": "https://jacoblincool.github.io/ai-programmer",
+	"packageManager": "pnpm@8.15.1"
+}
