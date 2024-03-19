@@ -63,5 +63,5 @@
 		"url": "https://github.com/JacobLinCool/ai-programmer/issues"
 	},
 	"homepage": "https://jacoblincool.github.io/ai-programmer",
-	"packageManager": "pnpm@8.15.1"
+	"packageManager": "pnpm@8.15.5"
 }
